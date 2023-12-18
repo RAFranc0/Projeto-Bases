@@ -1,0 +1,198 @@
+/*Fonts*/
+@import url(../css/clash-display.css);
+
+/*Variables*/
+:root {
+    --c-dark: #000000;
+    --c-brand: #c3000096;
+    --c-brand-light: #c30000;
+    --c-brand-dark: 0, 0, 0;
+    --c-brand-white: 255, 255, 255;
+    --c-body: #FFF;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --trasition: all 0.4s ease; 
+}
+
+/*Reset and Helpers*/
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+    background-color: var(--c-dark);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 800;
+    color: var(--c-body);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--trasition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/*NavBar*/
+
+.navbar {
+    box-shadow: var(--box-shadow);
+    font-size: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-brand);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.icon a{
+    
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    flex: none;
+}
+
+/*BTN*/
+
+.btn {
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+/*BASES*/
+
+#bases-index {
+    background: linear-gradient(rgba(var(--c-brand-dark), 0.500), rgba(var(--c-brand-dark), 0.400)), url(../imgsbases/LogoInvertido750.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+#bases-h1 {
+    font-size: 8em;
+}
+
+/*SECTION TITLE*/
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 240px;
+    height: 5px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*ICONBOX*/
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-white), 0.3);
+    color: var(--c-brand-white);
+    font-size: 34px;
+    flex: none;
+}
+/*Sobre*/
+
+#sobre h1{
+    background: rgba(var(--c-brand-white), 1);
+    color: var(--c-dark);
+    border-radius: 4px;
+}
+
+#sobre-central {
+    background-color: var(--c-brand-light);
+    padding: 30px;
+}
+/*SERVICE*/  
+
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    max-width: 800px;
+    border: 1px solid white;
+}
+
+.service::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(var(--c-brand-dark), 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--trasition);
+}
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color: white;
+}
+
+.service:hover .iconbox {
+    background-color: rgba(255, 255, 255,0.3);
+    color: white;
+}
